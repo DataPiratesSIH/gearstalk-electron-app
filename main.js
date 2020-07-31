@@ -1,6 +1,6 @@
 "use strict";
 
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, shell } = require("electron");
 
 let mainWindow = null;
 
@@ -19,7 +19,11 @@ const createMainWindow = () => {
   mainWindow.loadURL("http://157.245.101.179:80/");
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();\
+  mainWindow.webContents.on('new-window', function (e, url) {
+    e.preventDefault();
+    shell.openExternal(url)
+  });
 
   // Emitted when the mainWindow is closed.
   mainWindow.on("closed", function () {

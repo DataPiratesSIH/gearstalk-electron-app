@@ -1,33 +1,33 @@
 {
   "name": "gearstalk-electron-app",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Electron app for gearstalk",
   "build": {
-		"appId": "com.datapirates.gearstalk",
-		"productName": "gearstalk",
+    "appId": "com.datapirates.gearstalk",
+    "productName": "gearstalk",
     "win": {
-      "icon" : "build/logo.png",
+      "icon": "build/logo.png",
       "target": [
-          "nsis",
-          "msi",
-          "portable"
+        "nsis",
+        "msi",
+        "portable"
       ]
-  },
-		"mac": {
-			"category": "public.app-category.education",
+    },
+    "mac": {
+      "category": "public.app-category.education",
       "target": [
         "pkg"
-    ],
-    "icon" : "build/logo.png"
-		},
-		"linux": {
-			"target": [
+      ],
+      "icon": "build/logo.png"
+    },
+    "linux": {
+      "target": [
         "AppImage"
-        ],
+      ],
       "category": "Development",
-      "icon" : "build/logo.png"
-		}
-	},
+      "icon": "build/logo.png"
+    }
+  },
   "main": "main.js",
   "repository": {
     "type": "git",
@@ -36,9 +36,9 @@
   "scripts": {
     "start": "electron .",
     "postinstall": "electron-builder install-app-deps",
-		"build": "electron-builder",
-		"release": "electron-builder --publish always",
-    "deploy": "git add -A && git commit -am v2.0.0 && git tag v2.0.0 && git push && git push --tags "
+    "build": "electron-builder",
+    "release": "electron-builder --publish always",
+    "deploy": "git add -A && git commit -am v3.0.0 && git tag v3.0.0 && git push && git push --tags "
   },
   "author": "DataPirates",
   "license": "ISC",
