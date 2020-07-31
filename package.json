@@ -1,6 +1,6 @@
 {
   "name": "gearstalk-electron-app",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Electron app for gearstalk",
   "build": {
 		"appId": "com.datapirates.gearstalk",
@@ -38,7 +38,7 @@
     "postinstall": "electron-builder install-app-deps",
 		"build": "electron-builder",
 		"release": "electron-builder --publish always",
-    "deploy": "git add -A && git commit -m \"added new release \" && git push  "
+    "deploy": "git add -A && git commit -am v2.0.0 && git tag v2.0.0 && git push && git push --tags "
   },
   "author": "DataPirates",
   "license": "ISC",
